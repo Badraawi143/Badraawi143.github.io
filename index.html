@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/996973c893.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- My Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- My jQuery -->
+    <script src="main.js"></script>
+
+    <!-- Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+
+    <title>Covid-19 Tracker Somaliland</title>
+
+    
+
+  </head>
+  <body>
+
+
+    <div class="container-fluid bg-light p-5 text-center my-3">
+
+      <h1 class=""><img src="flag.jpg"  width="150px" height="100px" alt="Avatar"> Covid-19 Tracker Somaliland <img src="nice.jpg" width="150px" height="100px" alt="Avatar" ></h1>
+      <h5 class="text-muted">
+        Large Project to keep track of all the COVID-19 cases around the
+        Somaliland Regions.
+      </h5>
+    </div>
+
+    <div class="container my-5">
+      <div class="row text-center">
+
+        <table class="table table-dark">
+    <thead>
+      <tr>
+        <th>Regions</th>
+        <th>confirmed</th>
+        <th>active</th>
+        <th>recovered</th>
+        <th>deaths</th>
+        <th>Total</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Maroodi-jeex</td>
+        <td>2</td>
+        <td>0</td>
+        <td>2</td>
+        <td>0</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>Awdal</td>
+        <td>1</td>
+        <td>0</td>
+        <td>1</td>
+        <td>0</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Tog-dheer</td>
+        <td>1</td>
+        <td>0</td>
+        <td>1</td>
+        <td>0</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Saaxil</td>
+        <td>1</td>
+        <td>0</td>
+        <td>1</td>
+        <td>0</td>
+        <td>1</td>
+      </tr>
+       <tr>
+        
+      </tr>
+    </tbody>
+  </table>
+        <!-- <div class="col-3 text-warning">
+          <h5>All Confirmed</h5>
+          <p id="confirmed">7</p>
+        </div>
+        <div class="col-3 text-info">
+          <h5>Active</h5>
+          <p id="active">0</p>
+        </div>
+        <div class="col-3 text-success">
+          <h5>Recovered</h5>
+          <p id="recovered">7</p>
+        </div>
+        <div class="col-3 text-danger">
+          <h5>Deceased</h5>
+          <p id="deaths">0</p>
+        </div> -->
+      </div>
+     <h1> <img src="Somaliland.jpg" id="myImg"></h1>
+    </div>
+
+   
+<img  src="flag.jpg" alt="Snow" style="width:100%;max-width:300px">
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+
+          
+
+    <div class="container bg-light p-3 my-5 text-center">
+      <h5 class="text-info">"Prevention is the Cure."</h5>
+      <p class="text-muted">Stay Indoors Stay Safe.</p>
+    </div>
+
+    <canvas id="myChart"></canvas>
+
+    <div class="container text-center my-5">
+      <h6 class="text-info">
+        *this Details Will Automatically Updated Every Second While New Cases Reseaved.*
+      </h6>
+    </div>
+
+    <footer class="footer mt-5 py-3 bg-light">
+      <div class="container text-center">
+        <span class="text-muted"
+          >Copyright &copy;2020,
+          <a href="https://www.Mohamed-Badraawi.in" target="_blank">Mohamed-Badraawi</a></span
+        >
+      </div>
+    </footer>
+  </body>
+</html>
